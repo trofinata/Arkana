@@ -5,104 +5,111 @@
 	<title>Arkana</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/Montserrat.css">
-	<link rel="stylesheet" href="css/fontello.css">
-	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/fontello.css">	
+	<link rel="stylesheet" href="slick/slick.min.css">
+	<link rel="stylesheet" href="slick/slick-theme.min.css">
 </head>
 <body>	
-	<input type="radio" class="visually-hidden" id="img-1" name="toggle" checked>
-	<input type="radio" class="visually-hidden" id="img-2" name="toggle">
-	<input type="radio" class="visually-hidden" id="img-3" name="toggle">
-	<div class="slider-wrapper">
+	<section class="slider">
+		<h2 class="visually-hidden">Слайдер</h2>
+		 <ul class="slider-list">
+		 	<li class="slider-item slider-item__slide1">
+		 		<div class="container">
+			 		<h3 class="slider__title">Аксессуары</h3>
+			 		<!-- /.slider__title -->
+			 		<p class="slider__descr">Грамотно подобранный аксессуар станет прекрасным дополнением к вашему образу</p>
+			 		<!-- /.slider__descr -->
+			 		<a href="" class="button">Выбрать аксессуар</a>
+		 		</div>
+		 	</li>
+		 	<li class="slider-item slider-item__slide2">
+		 		<div class="container">
+			 		<h3 class="slider__title">Футболки</h3>
+			 		<!-- /.slider__title -->
+			 		<p class="slider__descr">В нашем магазине есть футболки на все случаи жизни</p>
+			 		<!-- /.slider__descr -->
+			 		<a href="" class="button">Выбрать футболку</a>
+		 		</div>
+		 	</li>
+		 	<li class="slider-item slider-item__slide3">
+		 		<div class="container">
+			 		<h3 class="slider__title">Платья</h3>
+			 		<!-- /.slider__title -->
+			 		<p class="slider__descr">Каждая девушка найдет себе платье по душе</p>
+			 		<!-- /.slider__descr -->
+			 		<a href="" class="button">Выбрать платье</a>
+		 		</div>
+		 	</li>		 	
+		 </ul>
+	</section>		
+	<header class="header">
 		<div class="container">
-			<header class="header">
-				<div class="header-top">
-					<ul class="header-top__list">
-						<li class="header-top__item">
-							<div class="menu-wrapper">
-								<a href="#menu" class="menu-link">
-									<span></span>
-								</a>
-								<div class="menu">
-									<ul>
-										<li><a href="#">Платья</a></li>
-										<li><a href="#">Блузки</a></li>
-										<li><a href="#">Аксессуары</a></li>
-										<li><a href="#">Футболки</a></li>
-										<li><a href="#">Верхняя одежда</a></li>
-										<li><a href="#">Головные уборы</a></li>
-									</ul>
-								</div>
+			<div class="header-top">
+				<ul class="header-top__list">
+					<li class="header-top__item">
+						<div class="menu-wrapper">
+							<a href="#menu" class="menu-link">
+								<span></span>
+							</a>
+							<div class="menu">
+								<ul>
+									<li><a href="#">Платья</a></li>
+									<li><a href="#">Блузки</a></li>
+									<li><a href="#">Аксессуары</a></li>
+									<li><a href="#">Футболки</a></li>
+									<li><a href="#">Верхняя одежда</a></li>
+									<li><a href="#">Головные уборы</a></li>
+								</ul>
 							</div>
-							<i class="icon-search"></i>
-							<form action="" class="header-search">
-								<input type="search" name="search" class="header-search__input">
-							</form>
-						</li>
-						<!-- /.header-top__item -->
-						<li class="header-top__item">
-							<img src="img/header/logo.png" alt="Логотип" class="header-logo">
-						</li>
-						<!-- /.header-top__item -->
-						<li class="header-top__item">
-							<i class="icon-share"></i>
-							<i class="icon-shopping-bag"></i>
-						</li>
-						<!-- /.header-top__item -->
-					</ul>
-					<!-- /.header-top__list -->
-				</div>
-				<!-- /.header-top -->
-				<div class="header-bottom">
-					<ul class="header-bottom__list">
-						<li class="header-bottom__item"><a href="#" class="header-bottom__link">Платья</a></li>
-						<!-- /.header-bottom__item -->
-						<li class="header-bottom__item"><a href="#" class="header-bottom__link">Блузки</a></li>
-						<!-- /.header-bottom__item -->
-						<li class="header-bottom__item"><a href="#" class="header-bottom__link">Аксессуары</a></li>
-						<!-- /.header-bottom__item -->
-						<li class="header-bottom__item"><a href="#" class="header-bottom__link">Футболки</a></li>
-						<!-- /.header-bottom__item -->
-						<li class="header-bottom__item"><a href="#" class="header-bottom__link">Верхняя одежда</a></li>
-						<!-- /.header-bottom__item -->
-						<li class="header-bottom__item"><a href="#" class="header-bottom__link">Головные уборы</a></li>
-						<!-- /.header-bottom__item -->
-					</ul>
-					<!-- /.header-bottom__list -->
-				</div>
-				<!-- /.header-bottom -->
-			</header>
-			<section class="slider">
-				<h2 class="visually-hidden">Слайдер</h2>
-				<!-- /.visually-hidden -->
-				<div class="slider-controls">
-					<label for="img-1"></label>
-					<label for="img-2"></label>
-					<label for="img-3"></label>
-				</div>
-						<!-- /.slider-controls -->		
-				<ul class="slider-list">
-					<li class="slider-item slide" id="slide1">
-						<h3 class="slider-title">Аксессуары</h3>
-						<p class="slider-descr">Грамотно подобранный аксессуар станет прекрасным дополнением к вашему образу</p>
-						<a href="#" class="button">Выбрать аксессуар</a>
+						</div>
+						<i class="icon-search"></i>
+						<form action="" class="header-search">
+							<input type="search" name="search" class="header-search__input">
+						</form>
 					</li>
-					<li class="slider-item slide" id="slide2">
-						<h3 class="slider-title">Футболки</h3>
-						<p class="slider-descr">В нашем магазине есть футболки на все случаи жизни</p>
-						<a href="#" class="button">Выбрать футболку</a>
+					<!-- /.header-top__item -->
+					<li class="header-top__item">
+						<img src="img/header/logo.png" alt="Логотип" class="header-logo">
 					</li>
-					<li class="slider-item slide" id="slide3">
-						<h3 class="slider-title">Аксессуары</h3>
-						<p class="slider-descr">Грамотно подобранный аксессуар станет прекрасным дополнением к вашему образу</p>
-						<a href="#" class="button">Выбрать аксессуар</a>
+					<!-- /.header-top__item -->
+					<li class="header-top__item">
+						<i class="icon-share"></i>
+						<i class="icon-shopping-bag"></i>
 					</li>
+					<!-- /.header-top__item -->
 				</ul>
-				<!-- /.slider-list -->
-			</section>
-		<!-- /.slider -->
+				<!-- /.header-top__list -->
+			</div>
+			<!-- /.header-top -->
+			<div class="header-bottom">
+				<ul class="header-bottom__list">
+					<li class="header-bottom__item"><a href="#" class="header-bottom__link">Платья</a></li>
+					<!-- /.header-bottom__item -->
+					<li class="header-bottom__item"><a href="#" class="header-bottom__link">Блузки</a></li>
+					<!-- /.header-bottom__item -->
+					<li class="header-bottom__item"><a href="#" class="header-bottom__link">Аксессуары</a></li>
+					<!-- /.header-bottom__item -->
+					<li class="header-bottom__item"><a href="#" class="header-bottom__link">Футболки</a></li>
+					<!-- /.header-bottom__item -->
+					<li class="header-bottom__item"><a href="#" class="header-bottom__link">Верхняя одежда</a></li>
+					<!-- /.header-bottom__item -->
+					<li class="header-bottom__item"><a href="#" class="header-bottom__link">Головные уборы</a></li>
+					<!-- /.header-bottom__item -->
+				</ul>
+				<!-- /.header-bottom__list -->
+			</div>
+			<!-- /.header-bottom -->
 		</div>
-	</div>
+		<!-- /.container -->
+	</header>
+	<!-- /.header -->
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/main.js"></script>	
+	<script src="js/main.js"></script>
+	<script src="slick/slick.min.js"></script>
+	<script>
+		$('.slider-list').slick({
+			arrows: false
+		});
+	</script>	
 </body>
 </html>
