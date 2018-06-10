@@ -1,0 +1,71 @@
+.slider-wrapper	
+	position: relative
+	width: 100%	
+	height: 100vh		
+	background:
+		color: $light-gray
+		image: url('../img/slider/img1.jpg')
+		repeat: no-repeat
+		position: top center
+		size: cover		
+	.container		
+		width: 57%	
+		margin: 0 auto		
+		.slider
+			&-controls
+				position: absolute
+				bottom: 34px
+				left: 21%
+				display: flex
+				align-items: center	
+				z-index: 20
+				font-size: 0			
+				label
+					width: 10px
+					height: 10px
+					margin:
+						right: 8px
+					background:
+						color: $white
+					cursor: pointer
+			.slide
+				display: none
+			&-title
+				margin:
+					top: 20%
+					bottom: 24px
+			&-descr
+				margin-bottom: 47px			
+	/* &::before,
+	&::after
+		content: ''
+		visibility: hidden
+	&::before
+		background: 
+			image: url('../img/slider/img2.jpg')
+	&::after
+		background:
+			image: url('../img/slider/img3.jpg') */
+#img-1:checked ~ .slider-wrapper #slide1,
+#img-2:checked ~ .slider-wrapper #slide2,
+#img-3:checked ~ .slider-wrapper #slide3
+	display: block
+#img-1:checked ~ .slider-wrapper label[for="img-1"],
+#img-2:checked ~ .slider-wrapper label[for="img-2"],
+#img-3:checked ~ .slider-wrapper label[for="img-3"]
+	background:
+		color: $black
+#img-1:checked ~ .slider-wrapper
+	background:
+		image: url('../img/slider/img1.jpg')
+#img-2:checked ~ .slider-wrapper
+	background:
+		image: url('../img/slider/img2.jpg')	
+#img-3:checked ~ .slider-wrapper
+	background:
+		image: url('../img/slider/img3.jpg')
+	
+
+
+
+
