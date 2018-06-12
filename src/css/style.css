@@ -90,6 +90,37 @@ p {
   height: 100%;
 }
 
+.slider .slick-dots {
+  bottom: 34px;
+  left: 21%;
+  width: auto;
+}
+
+.slider .slick-dots li {
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  margin-right: 7px;
+}
+
+.slider .slick-dots li button {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+}
+
+.slider .slick-dots li button::before {
+  display: none;
+}
+
+.slider .slick-dots li.slick-active button {
+  background-color: #000;
+}
+
+.slider .slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -236,6 +267,10 @@ p {
   font-size: 11px;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.button:hover {
+  background-color: #1a1a1a;
 }
 
 .header {
