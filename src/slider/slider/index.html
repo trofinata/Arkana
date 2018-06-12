@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<script src="jquery-1.7.2.min.js"></script>
+<style>
+.slider { 
+	width:660px; 
+	position:relative;
+}
+.slider-content {
+	width:640px;
+	height:360px;
+	overflow: hidden;
+	border:10px solid #eee ;
+	position:relative;
+}
+.slide {
+	width:100%;
+	height:100%;
+}
+.slider-controls {
+	position:absolute;
+	right:15px;
+	bottom:12px;
+	text-align:center;
+}
+.slider-controls .control-slide {
+	margin:2px;
+	display:inline-block;
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	text-indent:-9999px;
+	background:url(radioBg.png) center bottom no-repeat;
+}
+.slider-controls .control-slide:hover {
+	cursor:pointer;
+	background-position:center center;
+}
+.slider-controls .control-slide.active {
+	background-position:center top;
+}
+.prew, .next {
+	display:none;
+	width:15px;
+	height:100%;
+	position:absolute;
+	top:0;
+	overflow:hidden;
+	text-indent:-999px;
+	background:url(arrowBg.png) left center no-repeat;
+	opacity:0.8;
+	z-index:3;
+}
+.prew {
+	left:10px;
+}
+.next {
+	right:10px;
+	background:url(arrowBg.png) right center no-repeat;
+}
+.prew:hover, .next:hover {
+	opacity:1;
+}
+.slider-content:hover .prew, .slider-content:hover .next {
+	display:block;
+}
+</style>
+<script>
+(function ($) {
+var SlideSpeed = 700;
+var TimeOut = 3000;
+ 
+$(document).ready(function(e) {
+	$('.slide').css(
+		{"position" : "absolute",
+		 "top":'0', "left": '0'}).hide().eq(0).show();
+	var slideNum = 0;
+	var slideTime;
+	slideCount = $(".slider-content .slide").size();
+	var animSlide = function(arrow){
+		clearTimeout(slideTime);
+		$('.slide').eq(slideNum).fadeOut(SlideSpeed);
+		if(arrow == "next"){
+			if(slideNum == (slideCount-1)){slideNum=0;}
+			else{slideNum++}
+			}
+		else if(arrow == "prew")
+		{
+			if(slideNum == 0){slideNum=slideCount-1;}
+			else{slideNum-=1}
+		}
+		else{
+			slideNum = arrow;
+			}
+		$('.slide').eq(slideNum).fadeIn(SlideSpeed, rotator);
+		$(".control-slide.active").removeClass("active");
+		$('.control-slide').eq(slideNum).addClass('active');
+		}
+var $linkArrow = $('<a class="prew" href="#">&lt;</a><a class="next" href="#">&gt;</a>')
+	.prependTo('.slider-content');		
+	$('.next').click(function(){
+		animSlide("next");
+		return false;
+		})
+	$('.prew').click(function(){
+		animSlide("prew");
+		return false;
+		})
+	var $adderSpan = '';
+	$('.slide').each(function(index) {
+			$adderSpan += '<span class = "control-slide">' + index + '</span>';
+		});
+	$('<div class ="slider-controls">' + $adderSpan +'</div>').appendTo('.slider');
+	$(".control-slide:first").addClass("active");
+	$('.control-slide').click(function(){
+	var goToNum = parseFloat($(this).text());
+	animSlide(goToNum);
+	});
+	var pause = false;
+	var rotator = function(){
+			if(!pause){slideTime = setTimeout(function(){animSlide('next')}, TimeOut);}
+			}
+	$('.slider').hover(	
+		function(){clearTimeout(slideTime); pause = true;},
+		function(){pause = false; rotator();
+		});
+	rotator();
+});
+})(jQuery);
+</script>
+</head>
+<body>
+<div class="slider">
+	<div class="slider-content">
+		<div class="slide"><div style="width:640px; height:360px; background-color:yellow;"></div></div>
+		<div class="slide"><div style="width:640px; height:360px; background-color:green;"></div></div>
+		<div class="slide"><div style="width:640px; height:360px; background-color:red;"></div></div>
+		<div class="slide"><div style="width:640px; height:360px; background-color:pink;"></div></div>
+	</div>
+</div>
+</body>
+</html>

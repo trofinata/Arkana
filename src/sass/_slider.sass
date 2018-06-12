@@ -1,105 +1,69 @@
-.slider
-	&-list
-		position: relative
+.slider 
+	position: relative
+	width: 100%
+	height: 100vh	
+	&-content 
 		width: 100%
-		height: 100vh		
-		background-color: $gray
-		& > input
-			display: none
-			& + label
-				position: relative						
-				display: inline-block
-				top: 90%
-				left: 22%			
-				width: 10px
-				height: 10px
-				margin-right: 7px
-				background: $white
-				cursor: pointer
-				z-index: 100
-				transition: background 0.8s ease-out 0s
-				&:hover
-					background: lighten($black, 80%)
-			&:checked + label
-				background: $black
-				& + div
-					visibility: visible
-					opacity: 1
-					transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0s		
-		& > div
-			position: absolute
-			top: 0
-			left: 0
-			right: 0
-			bottom: 0
-			z-index: 0
-			visibility: hidden
-			opacity: 0		
-			transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0.9s	
-	&-item
-		display: flex
-		align-items: center
-		&__img
-			&1		
-				background: url('../img/slider/img1.jpg')
+		height: 100%
+		overflow: hidden		 
+		position: relative
+	.slide 
+		width: 100%
+		height: 100%
+		&_img
+			&1
+				background: url(../img/slider/img1.jpg)
 				background-size: cover
-			&2		
-				background: url('../img/slider/img2.jpg')
+			&2
+				background: url(../img/slider/img2.jpg)
 				background-size: cover
-			&3		
-				background: url('../img/slider/img3.jpg')
-				background-size: cover			
-	&-info
-		display: flex
-		flex-direction: column
-		width: 57%
-		margin: 0 auto
-	&-title
-		margin-bottom: 24px
-		font:
-			weight: 400
-			size: 56px
-		line-height: 56px
-	&-descr
-		width: 50%
-		margin-bottom: 47px
-		font-size: 13px
-		color: $light-text
-	.icon
-		&-left-open		
-			display: flex
-			justify-content: center
-			align-items: center	
-			margin-top: 4px
-			margin-right: 3px			
-			font-size: 18px
-			color: $gray-arrow
-		&-right-open
-			display: flex
-			justify-content: center
-			align-items: center	
-			margin-top: 4px
-			margin-left: 3px			
-			font-size: 18px
-			color: $gray-arrow
-	&-arrow
+			&3
+				background: url(../img/slider/img3.jpg)
+				background-size: cover
+	&-controls 
 		position: absolute
-		top: 50%
-		transform: translateY(-50%)
-		display: flex
-		justify-content: center
-		align-items: center
-		width: 50px
-		height: 50px
-		border: 4px solid $white
-			radius: 50%
-		cursor: pointer
-		&_right
-			right: 15px
-			background-color: $dark-arrow
-		&_left
-			left: 15px
-
-
-
-
+		left: 21%
+		bottom: 34px		
+		& .control-slide 
+			margin-right: 7px
+			display: inline-block
+			width: 10px
+			height: 10px
+			overflow: hidden
+			text-indent: -9999px
+			background: $white	
+			cursor: pointer	
+			transition: background 0.8s ease-out 0s			
+			&:hover
+				background: lighten($black, 80%)			
+			&.active 
+				background: $black	
+				transition: background 0.8s ease-out 0s				
+.prew,
+.next 
+	width: 50px
+	height: 50px
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	overflow: hidden
+	text-indent: -999px
+	background: url(../img/slider/arrow-left.png) 47% 50% no-repeat
+	opacity: 1
+	z-index: 3
+	border: 4px solid $white
+		radius: 50%
+.prew 
+	left: 15px
+	&:hover
+		background: $dark-arrow url(../img/slider/arrow-left.png) 47% 50% no-repeat
+		transition: background 0.8s ease-out 0s		
+.next 
+	right: 15px
+	background: url(../img/slider/arrow-right.png) 52% 50% no-repeat
+	&:hover
+		background: $dark-arrow url(../img/slider/arrow-right.png) 52% 50% no-repeat
+		transition: background 0.8s ease-out 0s	 
+.slider-content:hover .prew,
+.slider-content:hover .next 
+	display: block
