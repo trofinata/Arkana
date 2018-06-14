@@ -1,11 +1,63 @@
+@media(max-width: 1400px)
+	.header
+		&-top__item
+			&:first-child,
+			&:last-child
+				width: 9%
+		&-bottom__list
+			width: 73%
+	.slider__descr
+		width: 51%
+@media(max-width: 1200px)
+	.header
+		&-bottom__list
+			width: 100%
+	.slider__descr
+		width: 54%
+	.menu		
+		&-list
+			width: 39%
 @media(max-width: 992px)
-	.slider-controls
-		.control-slide:hover
-			background: $white
+	.slider
+		&-controls
+			left: 15%	
+			.control-slide:hover
+				background: $white
+		.container
+			width: 70%
+		&__descr
+			width: 57%
 	.prew:hover
 		background: url(../img/slider/arrow-left.png) 47% 50% no-repeat
 	.next:hover
 		background: url(../img/slider/arrow-right.png) 52% 50% no-repeat
+	.header
+		.container
+			width: 70%
+	.menu
+		width: 75%	
+		li
+			a
+				&:hover
+					font-weight: 400
+@media(max-width: 768px)
+	.header
+		.container	
+			width: 95%
+	.slider
+		.container
+			width: 95%
+		&:hover
+			.prew,
+			.next
+				display: none
+		&-controls
+			left: 3%
+	.prew,
+	.next
+		display: none
+	.menu
+		width: 100%
 @media(max-width: 576px)
 	.slider
 		.slide
@@ -16,5 +68,32 @@
 				&3
 					background: url(../img/slider/mobile/img3.jpg) 
 					background-size: cover
+		.container
+			top: 30%
+		&__title
+			font-size: 45px
+		&__descr
+			width: 100%		
+	.header
+		&-bottom__list
+			display: none
+		&-top			
+			&__item
+				justify-content: center
+				&:first-child,
+				&:last-child
+					width: 17%
+					justify-content: space-between
+		&-logo
+			width: 85%
+	.menu
+		padding: 
+			left: 0
+			right: 0
+		&-list
+			width: 100%					
+			text-align: center
+	
+
 
 

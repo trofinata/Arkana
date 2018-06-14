@@ -1,37 +1,47 @@
 .menu	
 	display: flex
-	justify-content: center
+	flex-wrap: wrap
+	justify-content: space-between
 	align-items: center
 	position: absolute
 	top: 0	
 	left: -100vw
-	width: 100vw
-	height: 100vh	
-	background-color: $gray	
+	width: 58%
+	height: 0
+	padding-bottom: 30px		
+	padding-left: 105px
+	padding-right: 45px
+	background-color: $white	
 	z-index: 999
 	transition: all 0.5s	
 	&_active
-		left: 0
-	ul
-		padding: 0		
-		list-style-type: none
-		text-align: center
-		li
-			width: 100vw
-			height: 50px			
-		a
-			display: block
-			width: 100%
-			color: $black
-			text-decoration: none
-			line-height: 4
-			font-weight: 100
-			letter-spacing: 4px
-			transition: all 0.2s
-			&:hover					
+		left: 50%
+		height: 100vh
+		transform: translateX(-50%)
+		.menu-list
+			height: auto
+	&-list	
+		width: 32%	
+		height: 0
+		padding: 0
+		padding-top: 31px				
+		list-style-type: none		
+		li								
+			a
+				display: block				
+				margin-bottom: 13px
+				color: $darkest-text
 				text-decoration: none
-				background-color: rgba(255,255,255,.4)
-				font-family: 'Roboto Black', Arial
+				font-size: 10px				
+				font-weight: 100
+				letter-spacing: 2px
+				transition: all 0.2s
+				&:hover
+					font-weight: 700												
+			.menu-link__title
+				margin-bottom: 24px
+				font-size: 12px	
+				text-transform: uppercase							
 	&-link		
 		position: relative
 		top: 0
@@ -78,9 +88,13 @@
 		&_active span
 			background-color: transparent
 			&:before
+				top: -25px				
 				margin-top: 0
 				transform: rotate(135deg)
-			&:after
+			&:after	
+				top: -25px			
 				margin-top: 0
 				transform: rotate(-135deg)
+
+
 
