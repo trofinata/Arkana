@@ -17,6 +17,8 @@
 	.menu		
 		&-list
 			width: 39%
+	.advantages-list
+		width: 80%
 @media(max-width: 992px)
 	.slider
 		&-controls
@@ -40,6 +42,10 @@
 			a
 				&:hover
 					font-weight: 400
+	.advantages-list
+		width: 95%
+		&__item
+			width: 30%
 @media(max-width: 768px)
 	.header
 		.container	
@@ -58,6 +64,11 @@
 		display: none
 	.menu
 		width: 100%
+	.advantages-list		
+		&__item
+			width: 32%
+			&-title
+				font-size: 13px				
 @media(max-width: 576px)
 	.slider
 		.slide
@@ -93,6 +104,13 @@
 		&-list
 			width: 100%					
 			text-align: center
+	.advantages-list
+		flex-direction: column
+		&__item
+			width: 90%
+			margin-bottom: 30px
+			&:last-child
+				margin-bottom: 0
 	
 
 

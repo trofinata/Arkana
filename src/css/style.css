@@ -403,6 +403,65 @@ p {
   text-decoration: none;
 }
 
+.advantages {
+  padding-top: 45px;
+  padding-bottom: 47px;
+}
+
+.advantages-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 66%;
+  margin: 0 auto;
+}
+
+.advantages-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 25%;
+  text-align: center;
+}
+
+.advantages-list__item-title {
+  margin-bottom: 20px;
+  font-family: 'Montserrat Medium', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #000;
+}
+
+.advantages-list__item-descr {
+  font-size: 13px;
+  line-height: 20px;
+  color: #929292;
+}
+
+.advantages-list__img-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 28px;
+}
+
 @media (max-width: 1400px) {
   .header-top__item:first-child,
   .header-top__item:last-child {
@@ -429,6 +488,10 @@ p {
 
   .menu-list {
     width: 39%;
+  }
+
+  .advantages-list {
+    width: 80%;
   }
 }
 
@@ -468,6 +531,14 @@ p {
   .menu li a:hover {
     font-weight: 400;
   }
+
+  .advantages-list {
+    width: 95%;
+  }
+
+  .advantages-list__item {
+    width: 30%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -495,6 +566,14 @@ p {
 
   .menu {
     width: 100%;
+  }
+
+  .advantages-list__item {
+    width: 32%;
+  }
+
+  .advantages-list__item-title {
+    font-size: 13px;
   }
 }
 
@@ -551,5 +630,21 @@ p {
   .menu-list {
     width: 100%;
     text-align: center;
+  }
+
+  .advantages-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .advantages-list__item {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .advantages-list__item:last-child {
+    margin-bottom: 0;
   }
 }
