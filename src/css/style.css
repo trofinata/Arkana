@@ -31,6 +31,11 @@ p {
   clip: rect(0, 0, 0, 0);
 }
 
+.container {
+  width: 97%;
+  margin: 0 auto;
+}
+
 .slider {
   position: relative;
   width: 100%;
@@ -179,14 +184,14 @@ p {
   padding-left: 105px;
   padding-right: 45px;
   background-color: #fff;
-  z-index: 999;
+  z-index: 9999;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .menu_active {
   left: 50%;
-  height: 100vh;
+  height: auto;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
@@ -233,7 +238,7 @@ p {
   width: 18px;
   height: 12px;
   border-radius: 50%;
-  z-index: 1000;
+  z-index: 109999;
 }
 
 .menu-link span {
@@ -325,6 +330,21 @@ p {
   background-color: #1a1a1a;
 }
 
+.button-clothes {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  color: #000;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #fff;
+}
+
+.button-clothes:hover {
+  color: #fff;
+  background: #000;
+}
+
 .header {
   width: 100%;
   position: absolute;
@@ -409,6 +429,7 @@ p {
 }
 
 .advantages-list {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -417,6 +438,7 @@ p {
   justify-content: space-between;
   width: 66%;
   margin: 0 auto;
+  z-index: -2;
 }
 
 .advantages-list__item {
@@ -460,6 +482,28 @@ p {
   align-items: center;
   height: 50px;
   margin-bottom: 28px;
+}
+
+.clothes {
+  margin-bottom: 108px;
+}
+
+.clothes-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.clothes-list__item {
+  position: relative;
+  width: 24%;
+}
+
+.clothes-list__item__img {
+  width: 100%;
 }
 
 @media (max-width: 1400px) {
@@ -539,6 +583,20 @@ p {
   .advantages-list__item {
     width: 30%;
   }
+
+  .clothes {
+    margin-bottom: 50px;
+  }
+
+  .clothes .button-clothes:hover {
+    color: #000;
+    background-color: #fff;
+  }
+
+  .clothes .button-clothes:active {
+    color: #fff;
+    background: #000;
+  }
 }
 
 @media (max-width: 768px) {
@@ -574,6 +632,16 @@ p {
 
   .advantages-list__item-title {
     font-size: 13px;
+  }
+
+  .clothes-list {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .clothes-list__item {
+    width: 49%;
+    margin-bottom: 10px;
   }
 }
 
@@ -637,6 +705,12 @@ p {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 
   .advantages-list__item {
@@ -646,5 +720,9 @@ p {
 
   .advantages-list__item:last-child {
     margin-bottom: 0;
+  }
+
+  .clothes-list__item {
+    width: 100%;
   }
 }
